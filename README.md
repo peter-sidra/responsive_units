@@ -11,7 +11,7 @@ Add Responsive Units as a dependency in your pubspec.yaml
 ```yaml
 dependencies:
   ...
-  responsive_units: ^0.1.0
+  responsive_units: ^0.1.1
 ```
 ## Supported units
 - ```.w``` Returns width in pixels calculated as a percentage of the screen's width. (ex: 50.w return 50% of the screen's width)
