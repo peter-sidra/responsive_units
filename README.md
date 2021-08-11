@@ -1,4 +1,5 @@
 # Responsive Units
+
 Responsive Units is a simple flutter package that aims to aide with the development of responsive
 apps by providing responsive units that scale with the device's screen size.
 
@@ -7,19 +8,31 @@ While a number of other implementations on pub exist to tackle this particular i
 ![Demo](example/media/Demo.gif)
 
 ## Installation
+
 Add Responsive Units as a dependency in your pubspec.yaml
+
 ```yaml
 dependencies:
   ...
-  responsive_units: ^0.1.1
+  responsive_units: ^0.2.0
 ```
+
 ## Supported units
-- ```.w``` Returns width in pixels calculated as a percentage of the screen's width. (ex: 50.w return 50% of the screen's width)
-- ```.h``` Returns height in pixels calculated as a percentage of the screen's height. (ex: 50.h return 50% of the screen's height)
-- ```.dg``` Returns diagonal length in pixels calculated as a percentage of the screen's diagonal. (ex: 50.dg return 50% of the screen's diagonal)
+
+| Unit    | Description |
+| ------- | --------- |
+| `.w`    | Width in pixels calculated as a percentage of the screen's width. (ex: `50.w` return 50% of the screen's width) |
+| `.h`    | Height in pixels calculated as a percentage of the screen's height. (ex: `50.h` return 50% of the screen's height) |
+| `.dg`   | Diagonal length in pixels calculated as a percentage of the screen's diagonal. (ex: `50.dg` return 50% of the screen's diagonal) |
+| `.sfw`  | The (safe) width in pixels calculated as a percentage of the screen's width excluding the parts of the display that are partially obscured by system UI (such as notches and the status bar) ex: `50.sfw` returns 50% of the screen's safe width |
+| `.sfh`  | The (safe) height in pixels calculated as a percentage of the screen's height excluding the parts of the display that are partially obscured by system UI (such as notches and the status bar) ex: `50.sfh` returns 50% of the screen's safe height |
+| `.sfdg` | The (safe) diagonal length in pixels calculated as a percentage of the screen's diagonal length excluding the parts of the display that are partially obscured by system UI (such as notches and the status bar) ex: `50.sfdg` returns 50% of the screen's safe diagonal |
+| `.sp`   | Returns a scalable pixel value that scales with the user selected text scale factor <br> Tip: chain .sp to any other unit to scale with the text factor (ex: ```5.dg.sp``` will scale with both the diagonal and the text scale factor)|
 
 ## Usage
+
 To start using the responsive units, simply add the following builder argument to your WidgetsApp
+
 ```dart
 MaterialApp(
   ...
@@ -29,12 +42,15 @@ MaterialApp(
   ...
 )
 ```
+
 Now you can use the responsive units anywhere in your source code by just importing the package
+
 ```dart
 import 'package:responsive_units/responsive_units.dart';
 ```
 
 ## Minimal Example
+
 ```dart
 import 'package:flutter/material.dart';
 import 'package:responsive_units/responsive_units.dart';
@@ -75,7 +91,7 @@ class ResponsiveBox extends StatelessWidget {
               style: Theme.of(context)
                   .textTheme
                   .headline4
-                  ?.copyWith(fontSize: 4.dg, color: Colors.black),
+                  ?.copyWith(fontSize: 4.dg.sp, color: Colors.black),
               textAlign: TextAlign.center,
             ),
           ),
@@ -87,4 +103,5 @@ class ResponsiveBox extends StatelessWidget {
 ```
 
 ## Feedback
+
 If you have any feedback you'd like to share or issues with the package, feel free to submit a new issue at https://github.com/peter-sidra/responsive_units/issues

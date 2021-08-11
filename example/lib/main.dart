@@ -37,7 +37,7 @@ class ResponsiveBox extends StatelessWidget {
               style: Theme.of(context)
                   .textTheme
                   .headline4
-                  ?.copyWith(fontSize: 4.dg, color: Colors.black),
+                  ?.copyWith(fontSize: 4.dg.sp, color: Colors.black),
               textAlign: TextAlign.center,
             ),
           ),
