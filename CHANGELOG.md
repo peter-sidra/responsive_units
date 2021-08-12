@@ -8,3 +8,6 @@
 - Added new units [sfw, sfh, sfdg, sp]
 - Refactored the code for better extensibility in the future
 - Fixed some typos on the documentation
+
+## 0.2.0+1
+- Updated demo gif

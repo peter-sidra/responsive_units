@@ -1,6 +1,6 @@
 name: responsive_units
 description: A Flutter package that provides responsive units that scale with the device's screen size.
-version: 0.2.0
+version: 0.2.0+1
 homepage: https://github.com/peter-sidra/responsive_units
 repository: https://github.com/peter-sidra/responsive_units
 
